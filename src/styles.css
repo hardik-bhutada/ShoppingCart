@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("D:/Shopping_Cart/shopping-cart-app/node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+.container-fluid
+{
+    margin-top: 30px;
+}
+
+.flex-container {
+  margin-left: 0px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.flex-container > div > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 30px;
+}

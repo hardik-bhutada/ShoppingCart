@@ -1,0 +1,39 @@
+
+<div>
+    <p style="text-align: center" id="noItems">No Items in Cart</p>
+    <div class="flex-container-cart" *ngFor="let cart of cartItems">
+        <div><img src="{{ cart.image }}" alt="Image" width="100px" height="80px" ></div>
+        <div><p>Type : {{ cart.name }}</p></div>
+        <div><p>Price : {{ cart.price | currency:'INR':true }}</p></div> 
+        <button class="btn btn-danger removeButton" (click) = "removeCartItem()">X</button>
+    </div>
+
+    <div class="fixed-bottom ">
+        <p class="bottom-text total">
+            <span class="label label-info">Total : {{ totalCount  | currency:'INR':true}}</span>
+            <button class="btn btn-success" (click) = "isUserLoggedIn()">Confirm Purchase</button>
+        </p> 
+    </div>
+</div>
+
+<!-- <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+  
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> -->
+
+
+

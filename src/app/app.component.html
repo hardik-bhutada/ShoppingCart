@@ -1,0 +1,36 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand productsClass" routerLink = "">Products</a>
+        
+          <input class="form-control" style="width: 50% ; margin-right: 5px" type="text" placeholder="Search" [(ngModel)] = "filteredStatus">
+          <button class="btn btn-success" 
+          type="submit" 
+          (click) = "statusPass(filteredStatus)"
+          style="margin-right: 10px">Search</button>
+
+          <a><button class="btn btn-danger" (click) = "onLogOut()" style="margin-right: 10px" [disabled] = "loggedIn">Log Out</button></a>
+          <a><button class="btn btn-primary" (click) = "onLogIn()" [disabled] = "!loggedIn">Log In</button></a>
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item navbar-brand cartClass">
+            
+            <a class="nav-link" routerLink="/cartItems">Cart
+              <span class="badge badge-info">{{ cartCount }}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+<!-- Page Contents -->
+<router-outlet></router-outlet>
+
+</div>

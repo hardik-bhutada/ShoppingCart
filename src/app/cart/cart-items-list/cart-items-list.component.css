@@ -1,0 +1,42 @@
+.total
+{
+  background-color: black;
+  color: aliceblue;
+  padding: 20px;
+  text-align: right;
+}
+
+.total > span
+{
+  margin-right: 20px;
+}
+
+.bottom-text
+{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.flex-container-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+    border: 1px solid black;
+    margin: 5px;
+  }
+  
+  .flex-container-cart > div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+  }
+
+  .removeButton
+  {
+    width: 30px ;
+    height : 30px ; 
+    margin: 5px;
+  }
